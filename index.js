@@ -20,6 +20,7 @@ exports.init = function (sbot, opts) {
     var _ts = Date.now()
     if(ts + 1000 <= _ts) {
       blockyness = 1-(c/N)
+      c = 0
     }
   }, 1000/N).unref()
 
