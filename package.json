@@ -1,7 +1,7 @@
 {
   "name": "ssb-proc",
   "description": "expose process stats to sbot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/dominictarr/ssb-proc",
   "repository": {
     "type": "git",
