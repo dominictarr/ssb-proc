@@ -1,0 +1,19 @@
+{
+  "name": "ssb-proc",
+  "description": "expose process stats to sbot",
+  "version": "1.0.0",
+  "homepage": "https://github.com/dominictarr/ssb-proc",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/ssb-proc.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "set -e; for t in test/*.js; do node $t; done"
+  },
+  "author": "'Dominic Tarr' <dominic.tarr@gmail.com> (dominictarr.com)",
+  "license": "MIT"  
+}
