@@ -58,7 +58,7 @@ exports.init = function (sbot, opts) {
 
   sbot.status.hook(function (fn, args) {
     var status = fn.apply(this, args)
-    status.perf = {
+    status.proc = {
       pid: process.pid,
       uptime: process.uptime(),
       memoryUsage: process.memoryUsage(),
