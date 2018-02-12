@@ -55,9 +55,12 @@ exports.init = function (sbot, opts) {
         }
       })
       if(!_net) _net = o
-      for(var k in o)
-        net[k] = {rx: o[k].rx - _net[k].rx, tx: o[k].tx - _net[k].tx} //convert to bytes since process started
-
+      for(var k in o) {
+        var rx = o[k].rx - _net[k].rx
+        var tx = o[k].tx - _net[k].tx
+        if(rx || tx)
+          net[k] = {rx: rx, tx: tx} //convert to bytes since process started
+      }
     })
   }, 1000).unref()
 
