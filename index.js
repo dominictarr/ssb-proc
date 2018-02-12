@@ -33,15 +33,6 @@ exports.init = function (sbot, opts) {
     })
   }, 1000).unref()
 
-//  startInterval(function () {
-//    fs.readFile(path.join('/proc', ''+process.pid, 'stat'), 'utf8', function (err, str) {
-//      str.split(/\n/).forEach(function (line) {
-//        var parts = line.split(/:\s+/)
-//        if(parts[0]) io[parts[0]] = +parts[1]
-//      })
-//    })
-//  }, 1000).unref()
-//
   var _net, net = {}
   startInterval(function () {
     fs.readFile('/proc/net/dev', 'utf8', function (err, str) {
@@ -69,6 +60,7 @@ exports.init = function (sbot, opts) {
     var status = fn.apply(this, args)
     status.perf = {
       pid: process.pid,
+      uptime: process.uptime(),
       memoryUsage: process.memoryUsage(),
       cpuUsage: process.cpuUsage(),
       blockyness: blockyness,
@@ -80,6 +72,8 @@ exports.init = function (sbot, opts) {
   })
 
 }
+
+
 
 
 
